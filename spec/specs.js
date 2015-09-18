@@ -27,3 +27,13 @@ describe('Toppings', function() {
         expect(testToppings.toppings[0].topping + ", " + testToppings.toppings[0].amount ).to.eql("cheese, 10lb");
   });
 });
+
+
+
+describe('Cost', function() {
+  it("will calculate the cost of the pizza", function() {
+      var testCost = new Cost();
+        testCost.price()
+        expect(testCost.price()).to.equal("10");
+  });
+});
