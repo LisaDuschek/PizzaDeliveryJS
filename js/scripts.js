@@ -35,24 +35,26 @@ function Ingredient(topping, amount) {
 
 $(document).ready(function() {
     $("#order").click(function(event) {
-        var size = parseInt($('input[name="size"]:checked').val());
-        var amount = parseInt($('input[name="amount"]:checked').val());
+        var size = $(".size:selected").val();
+        var amount = ($('.amount:selected').val());
         var tomatoes = parseInt($('input[name="tomatoes"]:checked').val());
         var olives = parseInt($('input[name="olives"]:checked').val());
         var tuna = parseInt($('input[name="tuna"]:checked').val());
         var meat = parseInt($('input[name="meat"]:checked').val());
+
         var newOrder = new Pizza(size, amount, tomatoes, olives, tuna, meat);
-      newOrder.calculate(size, amount, tomatoes, olives, tuna, meat);
+        var orderPrice = newOrder.calculate(size, amount, tomatoes, olives, tuna, meat);
 
 
 
 
 
-    $("#show_order").text("Congratulations for stuffing your face with " + newOrder.amount + " pizzas of " + newOrder.size + "size." + " As toppings you chose: "
+    $("#show_order").text("Congratulations for stuffing your face with " + newOrder.size  +  newOrder.amount + " pizza(s). " + " As toppings you chose: "
       + newOrder.tomatoes + " servings of tomatoes, " + newOrder.olives +
-       " servings of olives and " + newOrder.tuna + " servings of tuna " + newOrder.meat + " servings of meat,you greedy bastard.")
+       " servings of olives and " + newOrder.tuna + " servings of tuna " + newOrder.meat + " servings of meat,you greedy bastard." + "Your order is a total of " + orderPrice)
 
     });
+
 
 
 });
