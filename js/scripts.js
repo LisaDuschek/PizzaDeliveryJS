@@ -3,6 +3,11 @@ function Pizza(quantity, size) {
     this.size = size;
 };
 
+Pizza.prototype.calculate = function(size, amount, tomatoes, olives, tuna, meat) {
+  var price = size * 2 * amount + meat;
+  return price;
+ };
+
 
 function Toppings(toppings) {
   this.toppings = [];
@@ -18,14 +23,3 @@ function Ingredient(topping, amount) {
   this.topping = topping;
   this.amount = amount;
 };
-
-// function Cost(topping, size, quantity) {
-//   this.topping = topping;
-//   this.size = size;
-//   this.quantity = quantity;
-// }
-//
-//
-// Cost.prototype.price = function(topping, amount, size) {
-//
-// }

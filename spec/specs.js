@@ -12,6 +12,13 @@ describe('Pizza', function() {
   });
 });
 
+describe('Pizza', function() {
+it("will calculate the price of the pizza", function() {
+  var testPizza = new Pizza(3,"medium");
+  expect(testPizza.calculate(2,3,1,1,1,1)).to.equal(13);
+});
+});
+
 
 describe('Toppings', function() {
   it("will create toppings object and return empty array", function() {
@@ -25,15 +32,5 @@ describe('Toppings', function() {
       var testToppings = new Toppings();
         testToppings.addTopping("cheese", "10lb")
         expect(testToppings.toppings[0].topping + ", " + testToppings.toppings[0].amount ).to.eql("cheese, 10lb");
-  });
-});
-
-
-
-describe('Cost', function() {
-  it("will calculate the cost of the pizza", function() {
-      var testCost = new Cost();
-        testCost.price()
-        expect(testCost.price()).to.equal("10");
   });
 });

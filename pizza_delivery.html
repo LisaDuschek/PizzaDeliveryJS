@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/skeleton.css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
     <script src="js/scripts.js"></script>
     <title></title>
   </head>
@@ -18,27 +18,58 @@
         <div class="column">
           <label for="size">Choose a size</label>
           <select >
-            <option class="small">Not that hungry-make it small!</option>
-            <option class="medium">quite hungry-medium!</option>
-            <option class="supersize">Supersize that thing!</option>
+            <option class="small" value="1">Not that hungry-make it small!</option>
+            <option class="medium" value="2">quite hungry-medium!</option>
+            <option class="supersize" value="3">Supersize that thing!</option>
           </select>
         </div>
 
         <div class="column">
           <label for="amount">How many pizzas do you want?</label>
-          <input type="number" id="amount" placeholder="How many pizzas?">
+          <select >
+            <option class="amount" value="1">Uno</option>
+            <option class="amount" value="2">Dos</option>
+            <option class="amount" value="3">Tres</option>
+          </select>
         </div>
 
         <div class="column">
           <label for="size">Choose your toppings</label>
-          <select >
-            <option class="tomatoes">Tomatoes</option>
-            <option class="olives">Olives</option>
-            <option class="tuna">Tuna</option>
-            <option class="meat">Weird meat-don't ask</option>
-            <option class="onions">Onions</option>
-            <option class="pepperoni">Pepperoni</option>
-          </select>
+
+          <div class="new_ingredient">
+            <form action="">
+                <label for="tomatoes">How much tomatoe servings?</label><br>
+                <input type="radio" name="tomatoes" value="2" >uno<br>
+                <input type="radio" name="tomatoes" value="3" checked>dos<br>
+                <input type="radio" name="tomatoes" value="4">tres
+              </form>
+          </div>
+          <br>
+          <div class="new_ingredient">
+            <form action="">
+                <label for="olives">How many olives servings??</label><br>
+                <input type="radio" name="ingredient_veggies" value="0" >uno<br>
+                <input type="radio" name="ingredient_veggies" value="-1" checked>dos<br>
+                <input type="radio" name="ingredient_veggies" value="-2">tres
+              </form>
+          </div>
+          <div class="new_ingredient">
+            <form action="">
+                <label for="tuna">How many tuna servings??</label><br>
+                <input type="radio" name="tuna" value="0" >uno<br>
+                <input type="radio" name="tuna" value="-1" checked>dos<br>
+                <input type="radio" name="tuna" value="-2">tres
+              </form>
+          </div>
+          <div class="new_ingredient">
+            <form action="">
+                <label for="meat">How many meat servings??</label><br>
+                <input type="radio" name="meat" value="0" >uno<br>
+                <input type="radio" name="meat" value="-1" checked>dos<br>
+                <input type="radio" name="meat" value="-2">tres
+              </form>
+          </div>
+
         </div>
 
 
