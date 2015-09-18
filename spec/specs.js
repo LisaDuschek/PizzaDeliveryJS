@@ -1,7 +1,7 @@
 describe('Pizza', function() {
   it("lets the user choose a quantity of the pizza", function() {
     var testPizza = new Pizza(3, "medium");
-    expect(testPizza.quantity).to.equal(3);
+    expect(testPizza.amount).to.equal(3);
   });
 });
 
