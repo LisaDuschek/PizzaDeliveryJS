@@ -4,12 +4,17 @@ function Pizza(quantity, size) {
 };
 
 
-function Toppings(topping){
-    this.toppings = [];
-
-};
+function Toppings(toppings) {
+  this.toppings = [];
+}
 
 Toppings.prototype.addTopping = function(topping, amount) {
-  var topping = new Topping([topping, amount]);
-  this.toppings.push(topping);
-};
+  var ingredient = new Ingredient(topping, amount);
+  this.toppings.push(ingredient);
+}
+
+
+function Ingredient(topping, amount) {
+  this.topping = topping;
+  this.amount = amount;
+}

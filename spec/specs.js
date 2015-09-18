@@ -19,3 +19,11 @@ describe('Toppings', function() {
     expect(testToppings.toppings).to.eql([]);
   });
 });
+
+describe('Toppings', function() {
+  it("will add a topping to the toppings-array", function() {
+      var testToppings = new Toppings();
+        testToppings.addTopping("cheese", "10lb")
+        expect(testToppings.toppings[0].topping + ", " + testToppings.toppings[0].amount ).to.eql("cheese, 10lb");
+  });
+});
